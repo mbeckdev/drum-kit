@@ -14,11 +14,12 @@ html {
   top: 0px;
   height: 100vh;
   width: 100vw;
+
   z-index: -2;
   /* filter: blur(1px); */
-  filter: grayscale() blur(2px) contrast(80%);
-  filter: grayscale() blur(2px) contrast(80%);
-  transform: scale(1.1);
+  /* filter: grayscale() blur(1px) contrast(80%); */
+  filter: grayscale() contrast(80%);
+  /* transform: scale(1.1); */
   /* filter: drop-shadow(16px 16px 20px blue); */
 }
 .color-overlay {
@@ -27,6 +28,7 @@ html {
   background-color: rgba(0, 150, 250, 0.2);
   height: 100vh;
   width: 100vw;
+  /* transform: scale(1.1); */
   z-index: -1;
 }
 body,
@@ -79,7 +81,7 @@ html {
   height: 10rem;
   text-align: center;
   color: var(--key-letter-color);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   text-shadow: 0 0 0.5rem var(--key-background-color);
 }
 
