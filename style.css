@@ -14,11 +14,20 @@ html {
   top: 0px;
   height: 100vh;
   width: 100vw;
-  z-index: -1;
+  z-index: -2;
   /* filter: blur(1px); */
+  filter: grayscale() blur(2px) contrast(80%);
   filter: grayscale() blur(2px) contrast(80%);
   transform: scale(1.1);
   /* filter: drop-shadow(16px 16px 20px blue); */
+}
+.color-overlay {
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 150, 250, 0.2);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
 }
 body,
 html {
@@ -86,6 +95,7 @@ kbd {
   font-family: 'Potta One', sans-serif;
   margin-top: -10px;
   margin-bottom: -5px;
+  text-shadow: 2px 1px 2px var(--key-background-color);
 }
 
 .sound {
@@ -93,4 +103,5 @@ kbd {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: var(--key-sound-color);
+  text-shadow: 2px 1px 2px var(--key-background-color);
 }
