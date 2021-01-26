@@ -3,10 +3,23 @@
 }
 html {
   font-size: 10px;
-  background: url('./background.jpg') bottom center;
-  background-size: cover;
-}
 
+  /* blur: 5px; */
+}
+.background {
+  position: absolute;
+  background: url('./background.jpg') bottom center;
+  background: url('./david-martin-6NpYOFB3VCI-unsplash-L.jpg') bottom center;
+  background-size: cover;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  /* filter: blur(1px); */
+  filter: grayscale() blur(2px) contrast(80%);
+  transform: scale(1.1);
+  /* filter: drop-shadow(16px 16px 20px blue); */
+}
 body,
 html {
   margin: 0;
@@ -19,24 +32,34 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-
+.photoby {
+  opacity: 50%;
+  position: absolute;
+  bottom: 10px;
+}
 .keys {
   /* display: flex; */
   display: grid;
   /* border: 1px solid red; */
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   grid-template-columns: 125px 125px 125px;
   grid-template-rows: 125px 125px 125px;
   /* flex: 1; */
   /* min-height: 100vh; */
   align-items: center;
   justify-content: center;
+  align-content: center;
 }
-
+:root {
+  --key-background-color: black;
+  --key-letter-color: white;
+  --key-sound-color: #ffc600;
+}
 .key {
-  border: 0.4rem solid black;
+  border: 0.4rem solid var(--key-background-color);
   border-radius: 10.5rem;
   margin: 1rem;
   font-size: 1.5rem;
@@ -45,15 +68,15 @@ html {
   width: 10rem;
   height: 10rem;
   text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 0.5rem black;
+  color: var(--key-letter-color);
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 0.5rem var(--key-background-color);
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: #ffc600;
-  box-shadow: 0 0 1rem #ffc600;
+  border-color: var(--key-sound-color);
+  box-shadow: 0 0 1rem var(--key-sound-color);
 }
 
 kbd {
