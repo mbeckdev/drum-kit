@@ -24,7 +24,8 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: 'Potta One', sans-serif; /*cursive;*/
 }
 
 .page {
@@ -82,11 +83,14 @@ html {
 kbd {
   display: block;
   font-size: 4rem;
+  font-family: 'Potta One', sans-serif;
+  margin-top: -10px;
+  margin-bottom: -5px;
 }
 
 .sound {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  color: #ffc600;
+  color: var(--key-sound-color);
 }
