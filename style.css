@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html {
   font-size: 10px;
   background: url('./background.jpg') bottom center;
@@ -11,10 +14,23 @@ html {
   font-family: sans-serif;
 }
 
-.keys {
-  display: flex;
-  flex: 1;
+.page {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keys {
+  /* display: flex; */
+  display: grid;
+  /* border: 1px solid red; */
+  width: 500px;
+  height: 500px;
+  grid-template-columns: 125px 125px 125px;
+  grid-template-rows: 125px 125px 125px;
+  /* flex: 1; */
+  /* min-height: 100vh; */
   align-items: center;
   justify-content: center;
 }
@@ -27,6 +43,7 @@ html {
   padding: 1rem 0.5rem;
   transition: all 0.07s ease;
   width: 10rem;
+  height: 10rem;
   text-align: center;
   color: white;
   background: rgba(0, 0, 0, 0.4);
